@@ -1,0 +1,121 @@
+<div id="accordion">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Passing value to child
+                </button>
+            </h5>
+        </div>
+
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <app-productlist [item]="parentData"></app-productlist>
+                <button (click)="createRandomValue()">send Data to Child</button>
+            </div>
+        </div>
+    </div><br>
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Passing value from Chile to Parent
+                </button>
+            </h5>
+        </div>
+
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <app-send-to-parent (sendToParentEvent)="callfromChild($event)"></app-send-to-parent>
+            </div>
+        </div>
+    </div><br>
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Two Way Binding
+                </button>
+            </h5>
+        </div>
+
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <input [(ngModel)]="twowayVariable" />
+                <h1>{{twowayVariable}}</h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Template Reference
+                </button>
+            </h5>
+        </div>
+
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <input #box1 name="inputBox1" placeholder="# is used for reference any htmlelement" /> <br>
+                <button class="btn btn-primary" (click)="sendMessage(box1)">User Refernce Variable</button>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Using Pipe ( usdToInr:80 )
+                </button>
+            </h5>
+        </div>
+
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <input [(ngModel)]="amount" placeholder="# is used for reference any htmlelement" /> <br>
+                {{amount}} USD = <label>{{amount| usdToInr:80}}</label>
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Form example
+                </button>
+            </h5>
+        </div>
+
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <app-form-example></app-form-example>
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                    aria-controls="collapseOne">
+                    Directive highLight
+                </button>
+            </h5>
+        </div>
+
+        <div class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+
+                <h2 appHighLight> {{dateTime|date:'medium'}} </h2>
+            </div>
+        </div>
+    </div>

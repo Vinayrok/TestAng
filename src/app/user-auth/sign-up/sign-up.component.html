@@ -1,0 +1,19 @@
+<form #ngForm1="ngForm" (ngSubmit)="SaveData(ngForm1.value)">
+    <div class="mb-2">
+      <label for="exampleFormControlTextarea1" class="form-label">Usern Name</label>
+      <input class="form-control"  ngModel name="username"  />
+    </div>
+    <div class="mb-2">
+      <label for="exampleFormControlInput1" class="form-label">Email address</label>
+      <input type="email" class="form-control" ngModel name="email" placeholder="name@example.com">
+    </div>
+    <div class="mb-2">
+      <label for="password" class="form-label" >Password</label>
+      <input type="password"  ngModel class="form-control" name="password" >
+    </div>
+    <div class="mb-1">
+      <button type="submit" class="btn btn-primary mb-3">Register</button>
+    </div>
+  </form>
+  
+  

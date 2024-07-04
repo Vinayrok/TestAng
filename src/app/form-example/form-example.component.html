@@ -1,0 +1,6 @@
+<form #loginForm="ngForm" (ngSubmit)="saveData(loginForm.value)">
+<input ngModel type="text" name="name" />
+<input ngModel type="password" name="password1" />
+<button  class="btn btn-primary"  >Inside Form Login</button>
+</form>
+<button  class="btn btn-primary"  >Outside Form Login</button>

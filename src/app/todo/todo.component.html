@@ -1,0 +1,33 @@
+
+<div class="container text-center">
+    <div class="row">
+      <div class="col-8">
+        <input type="text" #task class="form-control" #inputTodo  placeholder="Add Todos"/>
+      </div>
+      <div class="col-4">
+        <button class="btn btn-outline-secondary" type="button" #inputTodo (click)="SaveTodo(inputTodo.value)">Add ToDos</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Todo</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of todoList">
+        <tr>
+            
+            <td> {{item.id| truncate}}</td>
+            <td> {{item.value}}</td>
+            <td><button (click)="viewData(item.id)" class="btn btn-outline-secondary"  >View</button> &nbsp;
+                <button (click)="deleteToDos(item.id)" class="btn btn-outline-secondary" type="button">Delete</button></td>
+          </tr>
+    </tbody>
+</table>

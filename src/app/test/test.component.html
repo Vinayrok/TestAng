@@ -1,0 +1,21 @@
+
+<button (click)="getData()">Function Call</button>
+
+<button class="btn btn-primary" (click)="logData(intext.value)">Clicke me</button>
+<input [type]="text" placeholder="testing" #intext />
+
+<p>{{displayVal}}</p>
+
+<input [value]="userName" [disabled]="disable" /> <button (click)="flip()">Flip-flop</button>
+
+<h1 *ngIf="disable">testing if</h1>
+
+<div class="row" [ngSwitch]="color">
+    <h1 style="color: red;" *ngSwitchCase="'red'"> Red</h1>
+    <h1 style="color: blue;" *ngSwitchCase="'blue'"> blue</h1>
+    <h1 style="color: green;" *ngSwitchCase="'green'"> green</h1>
+    <h1 style="color: orange;" *ngSwitchCase="'orange'"> orange</h1>
+    <h1 *ngSwitchDefault > Default color</h1>
+</div>
+
+<div *ngFor="let item of users"  class="alert alert-success"> {{item}}</div>
