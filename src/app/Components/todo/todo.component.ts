@@ -2,7 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { TodoserviceService } from '../../services/todoservice.service';
 import { Todo } from '../../model/todo';
-import { Guid } from "guid-typescript";
+import { Guid } from 'guid-typescript';
+
 
 @Component({
   selector: 'app-todo',
