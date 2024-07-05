@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {  NgForm } from '@angular/forms';
 import { NgToastService } from 'ng-angular-popup';
 
+
 @Component({
   selector: 'app-form-example',
   templateUrl: './form-example.component.html',

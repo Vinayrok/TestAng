@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Todo } from '../model/todo';
-import { TodoserviceService } from '../services/todoservice.service';
+import { Todo } from '../../model/todo';
+import { TodoserviceService } from '../../services/todoservice.service';
 
 @Component({
   selector: 'app-todo-view',

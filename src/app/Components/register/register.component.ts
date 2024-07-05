@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { NgForm } from  '@angular/forms'
+import { Component } from "@angular/core";
+import { NgForm } from "@angular/forms";
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
