@@ -20,10 +20,10 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copy the build output to the Nginx HTML directory
-COPY --from=build /app/dist/test-ang /usr/share/nginx/html/cls
+COPY --from=build /app/dist/test-ang /usr/share/nginx/html/
 
 # Copy custom Nginx configuration file if needed
-# COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80

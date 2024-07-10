@@ -32,3 +32,9 @@ docker build -t your-angular-app:latest .
 
 ## To run the container with the mentioned image
 docker run -d -p 8005:80 your-angular-app:latest
+
+ docker run -d --name Angular-app -p 8005:80 your-angular-app:latest
+
+ ## To push the image to github
+ docker tag mongodbapi:latest vinayrok/your-angular-app:v1 
+  docker push vinayrok/your-angular-app:v1 
